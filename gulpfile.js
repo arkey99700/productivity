@@ -22,7 +22,7 @@ let paths = {
     },
     clean: "./" + projectFolder + "/",
   },
-  { src, dest, parallel } = require("gulp"),
+  { src, dest } = require("gulp"),
   gulp = require("gulp"),
   browsersync = require("browser-sync").create(),
   del = require("del"),
@@ -68,7 +68,7 @@ function css() {
     .pipe(browsersync.stream());
 }
 
-function wathcFiles(params) {
+function watchFiles(params) {
   gulp.watch([paths.watch.html], html);
   gulp.watch([paths.watch.css], css);
 }
@@ -78,7 +78,7 @@ function clean(params) {
 }
 
 let build = gulp.series(clean, gulp.parallel(css, html));
-let watch = gulp.parallel(build, wathcFiles, browserSync);
+let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.css = css;
 exports.html = html;
