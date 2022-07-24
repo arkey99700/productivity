@@ -1,4 +1,160 @@
-$color-accent: #5e81fe;
-$color-bg-main: #ffffff;
-$color-bg-accent: #6888ff;
-$color-bg-sub: #f5f8ff;
+$font-quicksand: Quicksand, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+  sans-serif;
+$font-roboto: Roboto, -apple-system, BlinkMacSystemFont, Tahoma, sans-serif;
+$font-open-sans: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+
+ul {
+  padding: 0;
+
+  list-style: none;
+}
+
+body {
+  font-family: $font-roboto;
+}
+
+.header,
+.footer {
+  padding: 0 120px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 113px;
+  height: 43px;
+
+  border: 0;
+  border-radius: 2px;
+
+  font-family: $font-quicksand;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease-out;
+
+  cursor: pointer;
+
+  &--blue {
+    background-color: #d2e1ff;
+    color: #3a79ff;
+
+    &:hover {
+      background-color: #a8c4ff;
+    }
+
+    &:focus {
+      outline: 2px solid #3a79ff;
+    }
+  }
+
+  &--red {
+    background-color: #ffd7d7;
+    color: #d43f3f;
+
+    &:hover {
+      background-color: #ffa4a4;
+    }
+
+    &:focus {
+      outline: 2px solid #d43f3f;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+
+  font-family: $font-quicksand;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 425px;
+  }
+
+  &__nav-item {
+    text-align: center;
+  }
+
+  &__nav-link {
+    color: #697ca6;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #5e81fe;
+      font-weight: 700;
+    }
+
+    &::before {
+      content: attr(data-title);
+
+      display: block;
+      height: 0;
+
+      font-weight: 700;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+
+  &__social {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icons-list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 45px;
+    width: 160px;
+  }
+
+  &__icons-item {
+    line-height: 0;
+  }
+
+  &__icons-link svg path {
+    transition: fill 0.3s;
+  }
+
+  &__icons-link:hover {
+    & svg path {
+      fill: #6188ff;
+    }
+
+    &#social-telegram {
+      & svg path {
+        &:first-child {
+          fill: #4d6ce1;
+        }
+        &:nth-child(2) {
+          fill: #3d4f9f;
+        }
+        &:last-child {
+          fill: #5e80fe;
+        }
+      }
+    }
+  }
+}
