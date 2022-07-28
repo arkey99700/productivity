@@ -13,17 +13,6 @@ body {
   font-family: $font-roboto;
 }
 
-.header,
-.footer {
-  padding: 0 120px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  height: 80px;
-}
-
 .button {
   display: flex;
   justify-content: center;
@@ -66,6 +55,42 @@ body {
 
     &:focus {
       outline: 2px solid #d43f3f;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: #d1d6e3;
+
+    transition: 0.2s all;
+
+    cursor: pointer;
+
+    &:not(:first-of-type) {
+      margin-left: 12px;
+    }
+
+    &:not(.slider__dot--active):hover {
+      background-color: #a8c4ff;
+    }
+
+    &--active {
+      background-color: #5283ff;
+
+      cursor: auto;
     }
   }
 }
@@ -155,6 +180,118 @@ body {
           fill: #5e80fe;
         }
       }
+    }
+  }
+}
+
+.section {
+  &__title {
+    color: #3d4f9f;
+    font-family: $font-quicksand;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: #3d4f9f;
+    font-family: $font-roboto;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: #8d96bd;
+    font-family: $font-roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+  }
+}
+
+.header,
+.footer {
+  padding: 0 120px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.hero {
+  height: 570px;
+
+  background-color: #f4f7ff;
+
+  &__slider {
+    height: 100%;
+
+    background-image: url("../img/hero.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+
+    & .slider__controls {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text-content {
+    padding-top: 90px;
+
+    text-align: center;
+
+    z-index: 2;
+  }
+
+  &__title {
+    margin: 15px 0 30px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+
+    & b {
+      font-weight: 500;
+    }
+  }
+
+  &__description {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  &__play-button {
+    position: absolute;
+    left: calc(50%);
+
+    padding: 0;
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 50%;
+
+    transform: translate(-50%, 20px);
+
+    box-shadow: 0px 0px 10px rgba(201, 209, 231, 0.6);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover svg circle {
+      fill: #d3e1ff;
+    }
+
+    &:focus {
+      outline: 2px solid #3a79ff;
     }
   }
 }
