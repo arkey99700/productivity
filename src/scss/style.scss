@@ -295,3 +295,26 @@ body {
     }
   }
 }
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 145px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: fit-content;
+
+    &:hover svg path {
+      fill: #5982e7;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 77px;
+    }
+  }
+}
