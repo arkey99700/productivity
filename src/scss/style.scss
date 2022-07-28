@@ -13,6 +13,13 @@ body {
   font-family: $font-roboto;
 }
 
+p {
+  color: #8d96bd;
+  font-family: $font-roboto;
+  font-size: 15px;
+  line-height: 29px;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -56,6 +63,38 @@ body {
     &:focus {
       outline: 2px solid #d43f3f;
     }
+  }
+}
+
+.buttons-group {
+  display: flex;
+
+  & .button {
+    color: #adb4d2;
+
+    background: transparent;
+    border: solid 1px #d1d1e4;
+
+    &--active {
+      color: #ffffff;
+
+      background-color: #4c85ff;
+      border: none;
+
+      box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+
+      &:hover {
+        background-color: #3a79ff;
+      }
+    }
+  }
+
+  & .button:first-child {
+    border-radius: 2px 0 0 2px;
+  }
+
+  & .button:last-child {
+    border-radius: 0 2px 2px 0;
   }
 }
 
