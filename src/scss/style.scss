@@ -864,3 +864,63 @@ p {
     }
   }
 }
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+
+  background-color: #6586ff;
+  background-image: url("../img/clouds_start.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title,
+  &__subtitle,
+  &__description {
+    color: #ffffff;
+  }
+
+  &__title {
+    margin: 0 0 30px 0;
+
+    font-size: 48px;
+    font-weight: 300;
+
+    & strong {
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 15px 0;
+  }
+
+  &__description {
+    margin: 0 0 60px 0;
+    width: 700px;
+  }
+
+  &__buttons-group {
+    & .button--active {
+      color: #565f82;
+
+      background-color: #ffffff;
+
+      box-shadow: none;
+
+      &:hover {
+        color: #ffffff;
+
+        background-color: #4c85ff;
+      }
+    }
+  }
+}
