@@ -802,3 +802,65 @@ p {
     }
   }
 }
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 965px;
+
+  &__content {
+    font-size: 15px;
+  }
+
+  &__list {
+    width: 745px;
+    height: fit-content;
+  }
+
+  &__item {
+    color: #8e96b7;
+    font-family: $font-quicksand;
+    font-weight: 400;
+    font-size: 15px;
+
+    border-bottom: 1px solid #d8e3fe;
+
+    &-header {
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+    }
+
+    &-title {
+      font-size: inherit;
+    }
+
+    &-icon-unfold {
+      margin: 0 25px;
+    }
+
+    &-content {
+      display: none;
+    }
+
+    &--active &-content {
+      display: flex;
+      align-items: center;
+      margin-left: 80px;
+      gap: 50px;
+    }
+
+    &--active &-icon-unfold {
+      transform: rotate(180deg);
+      & path {
+        stroke: #495274;
+      }
+    }
+
+    &--active &-header {
+      color: #495274;
+    }
+  }
+}
