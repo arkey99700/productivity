@@ -573,3 +573,131 @@ p {
     font-size: 18px;
   }
 }
+
+.blog {
+  height: 865px;
+
+  background-color: #f5f8ff;
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__subtitle {
+    margin-top: 100px;
+  }
+
+  &__slider {
+    &-container {
+      display: grid;
+      grid-template-columns: 1fr 950px 1fr;
+      grid-template-rows: 400px 1fr;
+    }
+
+    &-body {
+      box-sizing: border-box;
+
+      display: flex;
+      gap: 65px;
+      padding: 65px 40px;
+      width: 950px;
+      height: 400px;
+
+      background-color: #ffffff;
+      border: 1px solid #d8e3fe;
+
+      box-shadow: 0px 15px 50px #eff4ff;
+    }
+
+    &-imgs-container {
+      display: grid;
+      grid-template-columns: repeat(3, 126px);
+      grid-template-rows: repeat(2, 126px);
+      gap: 12px;
+    }
+
+    &-img {
+      grid-column: 3 / 4;
+
+      &:first-of-type {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+    }
+
+    &-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      place-self: center;
+      padding: 0;
+      width: 23px;
+      height: 15px;
+
+      border: none;
+      background: transparent;
+
+      cursor: pointer;
+
+      &:hover svg path {
+        stroke: #5283ff;
+      }
+
+      &--left {
+        justify-self: end;
+        margin-right: 75px;
+      }
+
+      &--right {
+        justify-self: start;
+        margin-left: 75px;
+      }
+    }
+
+    &-text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-title {
+      margin: 0;
+
+      color: #3d4f9f;
+      font-family: $font-quicksand;
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    &-description {
+      margin-bottom: 30px;
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-button {
+      width: 210px;
+
+      color: #a6b6da;
+      font-family: $font-quicksand;
+      font-size: 13px;
+      font-weight: 700;
+
+      background: transparent;
+
+      &:hover {
+        background: #eff4ff;
+      }
+    }
+
+    &-controls {
+      grid-column: 2 / 3;
+      justify-self: center;
+      margin-top: 100px;
+    }
+  }
+}
