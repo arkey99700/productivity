@@ -273,7 +273,8 @@ p {
   padding: 0 120px;
 }
 
-.header {
+.header,
+.footer__main {
   display: flex;
   align-items: center;
   height: 80px;
@@ -982,8 +983,28 @@ p {
       box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
 
       &:hover {
-        background-color: #4074f8;
+        background-color: #4c85ff;
       }
     }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 290px;
+
+  &__main {
+    margin-bottom: 30px;
+  }
+
+  &__copyright {
+    margin-left: 100px;
+
+    color: #aeb8d0;
+    font-family: $font-quicksand;
+    font-weight: 500;
+    font-size: 12px;
   }
 }
