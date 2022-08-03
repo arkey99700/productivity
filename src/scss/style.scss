@@ -36,10 +36,14 @@ p {
   font-weight: 700;
   text-decoration: none;
 
-  transition: background-color 0.2s ease-out;
+  transition: background-color, color 0.2s ease-out;
 
   cursor: pointer;
   white-space: nowrap;
+
+  &:focus {
+    outline: 2px solid #3a79ff;
+  }
 
   &--blue {
     background-color: #d2e1ff;
@@ -47,10 +51,6 @@ p {
 
     &:hover {
       background-color: #a8c4ff;
-    }
-
-    &:focus {
-      outline: 2px solid #3a79ff;
     }
   }
 
@@ -90,6 +90,12 @@ p {
     background: transparent;
     border: solid 1px #d1d1e4;
 
+    &:hover {
+      color: #3a79ff;
+
+      border-color: #3a79ff;
+    }
+
     &--active {
       color: #ffffff;
 
@@ -99,6 +105,8 @@ p {
       box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
 
       &:hover {
+        color: #ffffff;
+
         background-color: #3a79ff;
       }
     }
@@ -129,9 +137,13 @@ p {
     border-radius: 50%;
     background-color: #d1d6e3;
 
-    transition: 0.2s all;
+    transition: background-color 0.2s;
 
     cursor: pointer;
+
+    &:focus {
+      outline: 2px solid #3a79ff;
+    }
 
     &:not(:first-of-type) {
       margin-left: 12px;
@@ -217,21 +229,24 @@ p {
     transition: fill 0.3s;
   }
 
-  &__icons-link:hover {
-    & svg path {
-      fill: #6188ff;
-    }
-
-    &#social-telegram {
+  &__icons-link {
+    &:hover,
+    &:focus {
       & svg path {
-        &:first-child {
-          fill: #4d6ce1;
-        }
-        &:nth-child(2) {
-          fill: #3d4f9f;
-        }
-        &:last-child {
-          fill: #5e80fe;
+        fill: #6188ff;
+      }
+
+      &#social-telegram {
+        & svg path {
+          &:first-child {
+            fill: #4d6ce1;
+          }
+          &:nth-child(2) {
+            fill: #3d4f9f;
+          }
+          &:last-child {
+            fill: #5e80fe;
+          }
         }
       }
     }
@@ -375,6 +390,10 @@ p {
     &:not(:first-of-type) {
       margin-left: 77px;
     }
+  }
+
+  &__link:focus svg path {
+    fill: #5982e7;
   }
 }
 
@@ -654,7 +673,8 @@ p {
 
       cursor: pointer;
 
-      &:hover svg path {
+      &:hover svg path,
+      &:focus svg path {
         stroke: #5283ff;
       }
 
@@ -910,6 +930,22 @@ p {
   }
 
   &__buttons-group {
+    & .button {
+      &:hover {
+        color: #ffffff;
+
+        border-color: #ffffff;
+      }
+
+      &:focus {
+        color: #ffffff;
+
+        border-color: #ffffff;
+
+        outline: 2px solid #ffffff;
+      }
+    }
+
     & .button--active {
       color: #565f82;
 
@@ -920,7 +956,11 @@ p {
       &:hover {
         color: #ffffff;
 
-        background-color: #4c85ff;
+        background-color: #4d6ce1;
+      }
+
+      &:focus {
+        color: #565f82;
       }
     }
   }
@@ -958,7 +998,8 @@ p {
     &-bar {
       box-sizing: border-box;
 
-      padding: 20px 160px 20px 20px;
+      padding: 20px;
+      width: 280px;
       height: 60px;
 
       color: #7a85ad;
@@ -969,6 +1010,10 @@ p {
       background-color: #efeff7;
       border: none;
       border-radius: 5px;
+
+      &:focus {
+        outline: 2px solid #3a79ff;
+      }
     }
 
     &-button {
