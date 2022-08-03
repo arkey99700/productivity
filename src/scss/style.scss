@@ -924,3 +924,66 @@ p {
     }
   }
 }
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 330px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__title,
+  &__description {
+    text-align: left;
+  }
+
+  &__title {
+    margin: 0 0 18px 0;
+
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &-bar {
+      box-sizing: border-box;
+
+      padding: 20px 160px 20px 20px;
+      height: 60px;
+
+      color: #7a85ad;
+      font-family: $font-quicksand;
+      font-size: 13px;
+      font-weight: 700;
+
+      background-color: #efeff7;
+      border: none;
+      border-radius: 5px;
+    }
+
+    &-button {
+      width: 185px;
+      height: 60px;
+
+      color: #ffffff;
+
+      background-color: #4d6ce1;
+      border-radius: 5px;
+
+      box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
+
+      &:hover {
+        background-color: #4074f8;
+      }
+    }
+  }
+}
