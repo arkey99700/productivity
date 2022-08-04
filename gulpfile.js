@@ -92,6 +92,7 @@ function watchFiles(params) {
   gulp.watch([paths.watch.html], html);
   gulp.watch([paths.watch.css], css);
   gulp.watch([paths.watch.img], img);
+  gulp.watch([paths.watch.js], js);
 }
 
 function clean(params) {
