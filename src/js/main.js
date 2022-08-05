@@ -8,9 +8,11 @@ const swiperHero = new Swiper(".hero__slider", {
   creativeEffect: {
     prev: {
       opacity: 0,
+      translate: ["-50px", 0, 0],
     },
     next: {
       opacity: 0,
+      translate: ["50px", 0, 0],
     },
   },
   pagination: {
@@ -29,11 +31,11 @@ const swiperBlog = new Swiper(".blog__slider", {
   creativeEffect: {
     prev: {
       opacity: 0,
-      translate: ["-10px", 0, 0],
+      translate: ["-30px", 0, 0],
     },
     next: {
       opacity: 0,
-      translate: ["10px", 0, 0],
+      translate: ["30px", 0, 0],
     },
   },
   pagination: {
