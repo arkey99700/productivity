@@ -1,6 +1,6 @@
 const swiperHero = new Swiper(".hero__slider", {
   direction: "horizontal",
-  allowTouchMove: false,
+  allowTouchMove: true,
   speed: 800,
   slidesPerView: "auto",
   centeredSlides: true,
@@ -21,7 +21,7 @@ const swiperHero = new Swiper(".hero__slider", {
 
 const swiperBlog = new Swiper(".blog__slider", {
   direction: "horizontal",
-  allowTouchMove: false,
+  allowTouchMove: true,
   speed: 800,
   slidesPerView: "auto",
   centeredSlides: true,
@@ -48,7 +48,7 @@ const swiperBlog = new Swiper(".blog__slider", {
 
 const swiperQuotes = new Swiper(".quotes__slider", {
   direction: "horizontal",
-  allowTouchMove: false,
+  allowTouchMove: true,
   slidesPerView: "auto",
   spaceBetween: 70,
   effect: "creative",
